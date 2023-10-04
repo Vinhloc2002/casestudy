@@ -3,7 +3,7 @@
   <head>
     <style>
       body {
-        background-image: url(https://psb-info.net/wp-content/uploads/2021/11/anh-sang-la-gi-thumb-1280x720.jpg);
+        background-image: url(https://tienganhdanang.edu.vn/wp-content/uploads/2023/06/hinh-nen-girl-xinh-full-hd-cho-laptop-va-may.jpg);
         background-repeat: no-repeat;
         background-size: cover;
       }
@@ -13,7 +13,7 @@
     <title>Document</title>
   </head>
   <body>
-    <canvas width="800px" height="400px" style="border: 1px solid"> </canvas>
+    <canvas width="800px" height="700px" style="border: 1px solid"> </canvas>
     <!-- <script src="canvas.js"></script> -->
   </body>
   <script>
@@ -21,14 +21,14 @@
 
     const img = new Image();
     img.src =
-      "https://psb-info.net/wp-content/uploads/2021/11/anh-sang-la-gi-thumb-1280x720.jpg";
+      "https://tienganhdanang.edu.vn/wp-content/uploads/2023/06/hinh-nen-girl-xinh-full-hd-cho-laptop-va-may.jpg";
     img.onload = function () {
       ctx.drawImage(img, x, y);
     };
     const canvas = document.querySelector("canvas");
     const ctx = canvas.getContext("2d");
 
-    // var x = Math.random() * canvas.width;
+    var x = Math.random() * canvas.width;
     // var y = Math.random() * canvas.height;
     // var dx = (Math.random() - 0, 5) * 0.5;
     // var dy = (Math.random() - 0, 5) * 0.5;
@@ -45,7 +45,8 @@
     let rightPressed = false;
     let leftPressed = false;
 
-    function createCircle() {
+    function createCircle() {    
+      audio.play(); 
       ctx.beginPath();
       ctx.arc(x, y, radius, 0, Math.PI * 2, false);
       ctx.fill();
@@ -118,6 +119,7 @@
     }
 
     function animate() {
+      audio.play();
       requestAnimationFrame(animate);
       ctx.clearRect(0, 0, innerWidth, innerHeight);
       createCircle();
